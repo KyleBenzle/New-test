@@ -1,0 +1,419 @@
+1
+00:00:00.00 --> 00:00:02.06
+- [Instructor] Web3.js
+is the JavaScript Library
+
+2
+00:00:02.06 --> 00:00:05.01
+that we're going to use to
+interact with our DApps.
+
+3
+00:00:05.01 --> 00:00:08.00
+This open source project is the standard
+
+4
+00:00:08.00 --> 00:00:10.03
+for how we are going to
+interact from our client-side
+
+5
+00:00:10.03 --> 00:00:13.03
+applications to the Ethereum Network.
+
+6
+00:00:13.03 --> 00:00:14.08
+As of the recording of this course,
+
+7
+00:00:14.08 --> 00:00:17.09
+the current stable version is 0.20.
+
+8
+00:00:17.09 --> 00:00:20.05
+1.0 is currently in beta
+
+9
+00:00:20.05 --> 00:00:23.02
+however, I think its a
+better implementation
+
+10
+00:00:23.02 --> 00:00:24.07
+and it's starting to become the standard
+
+11
+00:00:24.07 --> 00:00:26.04
+even though it's in beta right now.
+
+12
+00:00:26.04 --> 00:00:28.07
+So a lot of people are using it.
+
+13
+00:00:28.07 --> 00:00:31.01
+There are a few different
+ways you can install it.
+
+14
+00:00:31.01 --> 00:00:35.05
+If you want to, you can
+install it using Node or Yarn,
+
+15
+00:00:35.05 --> 00:00:37.07
+or Meteor if you're using such a thing.
+
+16
+00:00:37.07 --> 00:00:40.03
+They do have a CDN link
+if you want to use that.
+
+17
+00:00:40.03 --> 00:00:43.05
+That makes it easy, so it's
+then in a distributed network
+
+18
+00:00:43.05 --> 00:00:45.09
+so it will download it from the closest
+
+19
+00:00:45.09 --> 00:00:48.03
+one essentially, in the CDN.
+
+20
+00:00:48.03 --> 00:00:50.07
+I'm gonna go ahead and just grab
+
+21
+00:00:50.07 --> 00:00:53.08
+the distribution code directly from here.
+
+22
+00:00:53.08 --> 00:00:55.01
+So the first thing that I want to do is
+
+23
+00:00:55.01 --> 00:00:58.04
+I want to select 1.0 Branch
+
+24
+00:00:58.04 --> 00:01:01.08
+and then I can go into the dist directory
+
+25
+00:01:01.08 --> 00:01:05.00
+and in here I'm going to
+grab the the minimized one.
+
+26
+00:01:05.00 --> 00:01:06.04
+You can see this is all one line
+
+27
+00:01:06.04 --> 00:01:08.01
+so all the white space has been removed
+
+28
+00:01:08.01 --> 00:01:12.02
+it's been compressed so that
+it's a smallest size possible.
+
+29
+00:01:12.02 --> 00:01:13.08
+I'm going to go the the raw
+
+30
+00:01:13.08 --> 00:01:17.05
+and I'm just going go to Save Page As
+
+31
+00:01:17.05 --> 00:01:19.04
+and I'm going to save it into my
+
+32
+00:01:19.04 --> 00:01:21.05
+web directory which is in my desktop.
+
+33
+00:01:21.05 --> 00:01:23.04
+This is where I am essentially keeping
+
+34
+00:01:23.04 --> 00:01:26.07
+everything that I am
+using for my client UI
+
+35
+00:01:26.07 --> 00:01:30.05
+and I am going to save web3min.js.
+
+36
+00:01:30.05 --> 00:01:32.09
+So now I've got the JavaScript file.
+
+37
+00:01:32.09 --> 00:01:36.04
+If you look you can see inside web3.js,
+
+38
+00:01:36.04 --> 00:01:40.07
+they have a number of different
+packages that you can use.
+
+39
+00:01:40.07 --> 00:01:42.09
+The utils one is helpful.
+
+40
+00:01:42.09 --> 00:01:45.03
+There are some things
+in here that you can do
+
+41
+00:01:45.03 --> 00:01:47.05
+in terms of setting the provider,
+
+42
+00:01:47.05 --> 00:01:50.07
+in terms of outputting
+the version of web3.js,
+
+43
+00:01:50.07 --> 00:01:52.07
+whatever it is that you want to do.
+
+44
+00:01:52.07 --> 00:01:55.09
+Another important package is web3.eth.
+
+45
+00:01:55.09 --> 00:01:57.02
+This is what's going to allow us to
+
+46
+00:01:57.02 --> 00:02:00.01
+interact directly with the blockchain.
+
+47
+00:02:00.01 --> 00:02:05.06
+So I can access the Coinbase
+of a particular block.
+
+48
+00:02:05.06 --> 00:02:07.03
+I can look at transactions.
+
+49
+00:02:07.03 --> 00:02:10.06
+I can go in and see different accounts
+
+50
+00:02:10.06 --> 00:02:11.07
+and what their balances are,
+
+51
+00:02:11.07 --> 00:02:13.05
+there's all kinds of stuff I can do.
+
+52
+00:02:13.05 --> 00:02:15.03
+This is how I can send Ether.
+
+53
+00:02:15.03 --> 00:02:17.04
+All the stuff is available in here.
+
+54
+00:02:17.04 --> 00:02:21.03
+So let's go ahead and
+plug web3 into our DApp.
+
+55
+00:02:21.03 --> 00:02:23.00
+Here is our DApp interface.
+
+56
+00:02:23.00 --> 00:02:26.04
+Notice that I've opened up
+my Java Console by going
+
+57
+00:02:26.04 --> 00:02:30.08
+to Developer, JavaScript
+Console in Chrome.
+
+58
+00:02:30.08 --> 00:02:33.01
+I'm going to go into my code here
+
+59
+00:02:33.01 --> 00:02:34.05
+and the first thing I'm gonna do is
+
+60
+00:02:34.05 --> 00:02:39.05
+I'm going to add web3.min.js as a script
+
+61
+00:02:39.05 --> 00:02:45.07
+and I am going to create
+another script block.
+
+62
+00:02:45.07 --> 00:02:48.02
+Then I am going to create
+an instance of web3
+
+63
+00:02:48.02 --> 00:02:54.00
+called web3, and this
+is going to say new Web3
+
+64
+00:02:54.00 --> 00:02:57.04
+and it's going to pass in an HTTP provider
+
+65
+00:02:57.04 --> 00:03:10.00
+Web3.providers.
+
+66
+00:03:10.00 --> 00:03:14.08
+9545 is the address of
+the truffle test server.
+
+67
+00:03:14.08 --> 00:03:17.09
+So that's going to create an instance of
+
+68
+00:03:17.09 --> 00:03:20.01
+my web3 object that I can use.
+
+69
+00:03:20.01 --> 00:03:24.04
+So I am now going to use it,
+
+70
+00:03:24.04 --> 00:03:39.03
+to get the version, just to
+output something to the log.
+
+71
+00:03:39.03 --> 00:03:42.05
+So let's go ahead and
+go back in and refresh
+
+72
+00:03:42.05 --> 00:03:43.07
+and you can see it's saying
+
+73
+00:03:43.07 --> 00:03:47.08
+using web3 version 1.0.0-beta.34.
+
+74
+00:03:47.08 --> 00:03:49.08
+So that's the one I am using.
+
+75
+00:03:49.08 --> 00:03:52.06
+The one other thing I might want to do
+
+76
+00:03:52.06 --> 00:03:57.03
+is if I want to enable
+interaction with MetaMask,
+
+77
+00:03:57.03 --> 00:04:00.06
+MetaMask will inject it's own web3.
+
+78
+00:04:00.06 --> 00:04:08.05
+So what I can do is I
+can do a test to see.
+
+79
+00:04:08.05 --> 00:04:15.06
+And then on this test I can
+then say web3 so if it exists,
+
+80
+00:04:15.06 --> 00:04:19.01
+I'm essentially going to
+create an instance using
+
+81
+00:04:19.01 --> 00:04:27.05
+my local script but
+accessing that provider.
+
+82
+00:04:27.05 --> 00:04:32.04
+And then here I can just type in
+
+83
+00:04:32.04 --> 00:04:37.05
+and copy this.
+
+84
+00:04:37.05 --> 00:04:40.02
+So that way if I do have MetaMask running
+
+85
+00:04:40.02 --> 00:04:41.04
+it would actually use it.
+
+86
+00:04:41.04 --> 00:04:43.07
+So if I were to run this
+
+87
+00:04:43.07 --> 00:04:46.04
+through MetaMask, through a web server,
+
+88
+00:04:46.04 --> 00:04:48.07
+so the web server served it up,
+
+89
+00:04:48.07 --> 00:04:53.00
+it would then access MetaMask's version
+
+90
+00:04:53.00 --> 00:04:56.05
+of web3 so to speak, it
+would use the provider
+
+91
+00:04:56.05 --> 00:04:59.04
+that I had entered in MetaMask, up here.
+
+92
+00:04:59.04 --> 00:05:00.07
+And it would allow me to interact
+
+93
+00:05:00.07 --> 00:05:02.06
+using the accounts that were in here.
+
+94
+00:05:02.06 --> 00:05:04.05
+So as you can see here
+
+95
+00:05:04.05 --> 00:05:07.01
+web3 is fairly easy to implement
+
+96
+00:05:07.01 --> 00:05:09.03
+and it enables us to do a lot
+
+97
+00:05:09.03 --> 00:05:12.03
+in interacting with the
+Ethereum blockchain.
+
